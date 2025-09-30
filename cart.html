@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header .title {
+            font-size: 1.5em;
+        }
+
+        .header .right-side {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .orders-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+       
+      
+
+        .cart {
+            width: 80%;
+            margin: auto;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .cart h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item-image img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .cart-item-info p {
+            margin: 5px 0;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cart-item-book  {
+            background: #4CAF50;
+            color: #fff;
+            border: 1px solid #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item-remove {
+            background:#f44336;
+            color: #fff;
+            border: 1px solid #f44336;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item-book :hover {
+            background: #388E3C;
+        }
+
+        .cart-item-remove :hover {
+            background: #FF8C00;
+        }
+        .container {
+                 max-width: 1200px;
+                 margin: 0 auto;
+                 text-align: center;
+             }
+             h1 {
+                 color:white;
+             }
+             p {
+                 color: #666;
+             }
+             .service {
+                 display: inline-block;
+                 width: 30%;
+                 margin: 20px;
+                 padding: 20px;
+                 background-color: #fff;
+                 border: 1px solid #ddd;
+                 border-radius: 5px;
+                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             }
+             .service h2 {
+                 color: #333;
+             }
+             .service p {
+                 color: #666;
+             }
+             .video-thumbnail {
+                 position: relative;
+             }
+             .video-thumbnail img {
+                 max-width: 100%;
+                 border-radius: 5px;
+             }
+             .play-button {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 font-size: 48px;
+                 color: white;
+                 background: rgba(0, 0, 0, 0.5);
+                 padding: 10px 20px;
+                 border-radius: 50%;
+             }
+             .our{
+                color: #333;
+             }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-leaf"></i> GreenLeaf Nursery</h1>
+        <div class="right-side">
+            <a href="orders.html" class="orders-link"><i class="fas fa-receipt"></i> Orders</a>
+           
+        </div>
+    </header>
+
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-items" id="cart-items">
+            <!-- Cart items will be added here -->
+        </ul>
+    </section>
+
+    <script>
+        // Retrieve cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        var cartItemsContainer = []
+
+        // Function to display cart items
+        function displayCartItems() {
+            cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear current items
+            cartItems.forEach(function(item, index) {
+                var listItem = document.createElement('li');
+                listItem.classList.add('cart-item');
+                listItem.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-info">
+                        <p>${item.name}</p>
+                        <p>${item.price}</p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <button class="cart-item-book" onclick="navigateToOrders(${index})">Book</button>
+                        <button  class="cart-item-remove"  onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(listItem);
+            });
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(index) {
+            cartItems.splice(index, 1); // Remove item from array
+            localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update local storage
+            displayCartItems(); // Refresh cart display
+        }
+        console.log('cartItemsContainer',cartItemsContainer)
+        // Function to navigate to orders.html
+        function navigateToOrders(index) {
+    //         var item = cartItems[index];
+    //    sessionStorage.setItem('bookedItem', JSON.stringify(item));
+    //    window.location.href = 'orders.html';
+    var item = {
+        name: cartItems[index].name,
+        price: cartItems[index].price
+    };
+    sessionStorage.setItem('bookedItem', JSON.stringify(item));
+    window.location.href = 'orders.html';
+
+        }
+
+        // Display cart items on page load
+        displayCartItems();
+    </script>
+  
+           
+        
+     <body>
+         <div class="container">
+             <h1 class="our">OUR SERVICES</h1>
+             <p>We provide the perfect service for you.</p>
+             <div class="services">
+                 <div class="service">
+                    <img src="../nursery-main/core-img/s1.png">
+                     <h2>Plants Care</h2>
+                     <p>In Aenean purus, pretium silo amet sapien denim moste consectet sedoni urna placerat sodales. service its.</p>
+                 </div>
+                 <div class="service">
+                    <img src="../nursery-main/core-img/s2.png">
+                     <h2>Pressure Washing</h2>
+                     <p>In Aenean purus, pretium silo amet sapien denim moste consectet sedoni urna placerat sodales. service its.</p>
+                 </div>
+                 <div class="service">
+                    <img src="../nursery-main/core-img/s3.png">
+                     <h2>Tree Service & Trimming</h2>
+                     <p>In Aenean purus, pretium silo amet sapien denim moste consectet sedoni urna placerat sodales. service its.</p>
+                 </div>
+             </div>
+             
+     </body>
+     </html>
+     
+    
+</body>
+</html>

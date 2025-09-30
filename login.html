@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Nursery Plant Ordering</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+  
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-leaf"></i> GreenLeaf Nursery</h1> 
+        <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a plant...">
+        <button class="search" onclick="searchProduct()"><i class="fas fa-search"></i></button>
+    </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#products"><i class="fas fa-seedling"></i> Products</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+          
+                
+        
+        </nav>
+    </header>
+    <section id="products" class="products">
+    
+        <h2>The nursery's particular strength is the variety and quality of plants we offer, and our customers love us for it.</h2>
+        <div class="product-list">
+            
+                <div class="product" id="product1">
+                    <img src="https://images.pexels.com/photos/3094208/pexels-photo-3094208.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fiddle Leaf Fig">
+                    <div class="product-info">
+                        <h3>Fiddle Leaf Fig</h3>
+                        <p>200</p>
+                        <p>Generally, Fiddle Leaf Fig helps purify the air, boost positive energy, promote concentration, increase productivity, and help overall health.</p>
+                        <button onclick="addToCart('product1')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+            <div class="product" id="product2">
+                <img src="https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Snake Plant">
+                <div class="product-info">
+                    <h3>Snake Plant</h3>
+                    <p> 150</p>
+                   
+<p> One of the well known snake plant health advantage is that it helps to eliminate harmful air pullutants in your indoor air. It absorbs cancer causing chemicals such benzene, formaldehyde, xylene, and toluene and also CO2.</p>
+                    <button onclick="addToCart('product2')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product3">
+                <img src="https://images.pexels.com/photos/1383044/pexels-photo-1383044.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Peace Lily">
+                <div class="product-info">
+                    <h3>Peace Lily</h3>
+                    <p>180</p>
+                    <p>Their rich peaceful symbolic meanings, air-purifying properties, and minimal needs make them popular for office and home spaces. Keep reading to learn the various uses and benefits of peace lilies.</p>
+
+                    <button onclick="addToCart('product3')"><i class="fas fa-cart-plus"></i> Add to Cart</button> 
+                </div>
+            </div>
+            <div class="product" id="product4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVp6FZkGynB2jBNDLR_8sdHxpMccs6Y_07g1y7n4reF0NdRo-5dCjLFH5uMxrEe2ibK9k&usqp=CAU" alt="Bamboo Plant">
+                <div class="product-info">
+                    <h3>Bamboo Plat</h3>
+                    <p>120</p>
+                    <p> bamboo crafts, furniture, construction materials, textiles, kitchenware, gardening, and flooring . Bamboo’s flexibility, strength, and durability make it an excellent choice for these applications. For example, bamboo furniture is not only aesthetically pleasing but also eco-friendly.
+                    </p>
+                    <button onclick="addToCart('product4')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product5">
+                <img src="https://unlimitedgreens.com/cdn/shop/products/Aloe-Vera-Website-Front.webp?crop=center&height=600&v=1676457070&width=600" alt="Aloe Vera">
+                <div class="product-info">
+                    <h3>Aloe Vera</h3>
+                    <p>100</p>
+                    <p>Aloe Vera has been used for centuries for its health, beauty, and skin care properties. The herb is used for its excellent moisturizing, hydrating, and skin-conditioning properties. It helps improve the appearance and integrity of skin and restores suppleness.</p>
+                    <button onclick="addToCart('product5')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRliy7YP2CjXqImE-ZAm1gmo6Ra94kpVr6KAGVgfsrvwUibKLpDdik5EVa45-DDpFRSXTo&usqp=CAU" alt="Succulent Plant">
+                <div class="product-info">
+                    <h3>Succulent Plant</h3>
+                    <p>180</p>
+                    <p>Crassula is a large genus of succulent plants. Perhaps one of the most common of them is the Jade Plant, or Crassula Ovata. Jade plants are native to South Africa and Mozambique. Known to some as money tree, lucky plant, or friendship tree, jade plants are one of the most popular and common succulents out there. Jade plants are evergreens.</p>
+                    <button onclick="addToCart('product6')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product7">
+                <img src="https://www.sunstrums.ca/cdn/shop/products/71uhcOvQvTL._AC_SL1500_1024x1024.jpg?v=1731966889" alt="Orchid">
+                <div class="product-info">
+                    <h3>Orchid</h3>
+                    <p>250</p>
+                    <p>The flowers of all orchids are considered edible, and some are even ingested as herbal medicine in certain cultures. However, some species do cause stomach irritation when you consume them. Meanwhile, vanilla orchids are the only edible fruit-bearing orchid species in the world. This article will talk about how safe orchids are for consumption.</p>
+                    <button onclick="addToCart('product7')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product8">
+                <img src="https://nestreeo.com/wp-content/uploads/2021/03/Tree-Fern-1.jpg" alt="Fern">
+                <div class="product-info">
+                    <h3>Fern</h3>
+                    <p>150</p>
+                  <p>  Fern Nutrition Fact: Fern Nutrition: Amount per ( 100 g) gram: Fern contains: Carbohydrates, Protein, Niacin, Riboflavin, Thiamine, Vitamin A, Vitamin C, Sodium, Potassium, Minerals, Calcium, Copper, Iron, Magnesium, Manganese, Selenium and Zinc. So, check out now in detail The 12 Health Benefits of Fern</p>
+
+                    <button onclick="addToCart('product8')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product" id="product9">
+                <img src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202428/0017/faux-potted-cactus-plant-large-bishop-planter-bundle-o.jpg" alt="Cactus">
+                <div class="product-info">
+                    <h3>Cactus</h3>
+                    <p>150</p>
+                    <p>Here are the three main uses of cactus: Food and Nutrition: Cacti have been a source of food for centuries, particularly in arid regions where other crops may not thrive. The most well-known edible cactus variety is the prickly pear cactus (Opuntia spp.), which produces fruit called "tunas."</p>
+                    <button onclick="addToCart('product9')"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productId) {
+            // Get the product element
+            var product = document.getElementById(productId);
+            var productImage = product.querySelector('img').src;
+            var productName = product.querySelector('h3').textContent;
+            var productPrice = product.querySelector('p').textContent;
+
+            // Store product details in local storage
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.push({ image: productImage, name: productName, price: productPrice });
+            console.log('cartItems',cartItems)
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Navigate to the cart page
+            window.location.href = 'cart.html';
+        }
+    </script>
+
+    <section class="testimonials">
+        <h1>What Our Customers Say</h1>
+        <p>The nursery's particular strength is the variety and quality of plants we offer, and our customers love us for it.</p>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.AZieRa0em5PwH1nju82vnQHaE8&pid=Api&P=0&h=180" alt="Charistine Berkley">
+                <div>
+                    <p>"In promotion and advertising, a testimonial or show consists of a person's written or spoken statement extolling the virtue of a product. The term 'testimonial' most commonly applies to the sales-pitches attributed to ordinary citizens, whereas the word 'endorsement'."</p>
+                    <h3>Charistine Berkley</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.-SFzB47VUHaJJG931bvuUwHaDt&pid=Api&P=0&h=180" alt="David Byer">
+                <div>
+                    <p>"In promotion and advertising, a testimonial or show consists of a person's written or spoken statement extolling the virtue of a product. The term 'testimonial' most commonly applies to the sales-pitches attributed to ordinary citizens, whereas the word 'endorsement'."</p>
+                    <h3>David Byer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+        </div>
+        </section>
+    <script>
+        function searchProduct() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            let found = false;
+
+            products.forEach(product => {
+                product.classList.remove('highlight');
+                const name = product.querySelector('h3').innerText.toLowerCase();
+                if (name.includes(searchValue)) {
+                    found = true;
+                    product.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    product.classList.add('highlight');
+                }
+            });
+
+            if (!found) {
+                alert('No matching plants found.');
+            }
+        }
+    </script>
+      
+      <footer>
+        <div class="footer-content">
+            <div>Sandhya Reddy</div>
+            <div class="social-icons">
+                <a href="#"><img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn"></a>
+                <a href="#"><img src="https://github.com/favicon.ico" alt="GitHub"></a>
+                <a href="#"><img src="https://twitter.com/favicon.ico" alt="Twitter"></a>
+                <a href="#"><img src="https://www.youtube.com/favicon.ico" alt="YouTube"></a>
+            
+            </div>
+            <p>Made with <i class="fa fa-heart-o" ></i> by SANDY &copy; 2025</p>
+        </div>
+    </footer>
+ 
+
+    
+
+</body>
+</html>

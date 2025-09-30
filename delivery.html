@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Green Leaf Nursery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+ <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.deal-of-the-day {
+    text-align: center;
+    padding: 1px;
+}
+
+.deal-of-the-day h1 {
+    font-size: 2.5em;
+}
+
+.deal-of-the-day h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.deal-of-the-day p {
+    font-size: 1em;
+    color: #777;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.countdown span {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+        .steps {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            margin: 10px 0;
+        }
+        .about-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    width: 80%;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    background-color: #4caf50;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.qualities-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.quality-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.quality-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.quality-item h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.quality-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+ </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <p>Free Shipping</p>
+            <p>100% Money Back</p>
+            <p>Payment Secure</p>
+            <p>Support 24/7</p>
+            <a href="index.php"><button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="deal-of-the-day">
+            <h1>Deal Of The Day</h1>
+            <h2>Don't Miss The Deal</h2>
+            <div class="container">
+                <h1 class="emoji">🌱🎉</h1>
+                <h1>Congratulations!</h1>
+                <p>Your green journey has just begun! Your plant booking was successful, and our leafy friend can’t wait to come home to you.</p>
+                <h2>Here’s what’s next:</h2>
+                <ul class="steps">
+                    <li>🌿 <strong>Relax & Breathe Easy:</strong> Your plant is being lovingly prepared for delivery.</li>
+                    <li>🌿 <strong>Stay Tuned:</strong> You’ll receive updates about your plant’s journey.</li>
+                    <li>🌿 <strong>Green Arrival:</strong> Get ready to welcome nature’s beauty into your space.</li>
+                </ul>
+                <p>Thank you for choosing our nursery. Happy Plant Parenting! 🌿🌼</p>
+                <p><strong>Best Regards,<br>Your Green Thumb Team</strong></p>
+           
+            <div class="countdown">
+                <span>10 days</span>
+                <span>6 hours</span>
+                <span>57 minutes</span>
+                <span>47 seconds</span>
+            </div>
+         
+            <img src="https://www.denizatiflowers.com/Upload/tasarim-cicek.jpg" alt="Plants">
+        </div>
+        </section>
+    </main>
+    <main>
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>We are leading in the plants service fields.</p>
+            <p>Quisque orci quam, vulputate non commodo finibus, molestie ac ante. Duis in scelerisque sem. Nulla sit amet varius nunc. Maecenas dui, tempus ullamcorper in.</p>
+            <div class="content-container">
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <span>Office plants</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Field manager</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Landscape design</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Garden Care</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <span>65%</span>
+                    </div>
+                </div>
+                <div class="qualities-section">
+                    <div class="quality-item">
+                        <img src="../nursery/core-img/b1.png" alt="Quality Products">
+                        <h2>Quality Products</h2>
+                        <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                    </div>
+                    <div class="quality-item">
+                        <img src="../nursery/core-img/b2.png" alt="Perfect Service">
+                        <h2>Perfect Service</h2>
+                        <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                    </div>
+                    <div class="quality-item">
+                        <img src="../nursery/core-img/b3.png" alt="100% Natural">
+                        <h2>100% Natural</h2>
+                        <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                    </div>
+                    <div class="quality-item">
+                        <img src="../nursery/core-img/b4.png" alt="Environmentally Friendly">
+                        <h2>Environmentally Friendly</h2>
+                        <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+     
+</body>
+</html>
